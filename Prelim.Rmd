@@ -1,0 +1,59 @@
+---
+title: "Resumen de páginas preliminares"
+---
+
+# Prefacio
+
+El libro cubre el trabajo con bases de datos de hasta 1-2Gb pero si se requiere incrementar el volumen de datos se debe usar la librería [data.table](https://github.com/Rdatatable/data.table). Se debe tener experiencia en programación, si no, se recomienda el libro [Hands-On Programming with R](http://shop.oreilly.com/product/0636920028574.do), del autor G. Garrett.
+
+## Requisitos
+
+Librerías requeridas:
+```
+install.packages(c("tidyverse", "maps", "nycflights13", "gapminder", "Lahman"))
+library(tidyverse)
+tidyverse_update()
+library(maps)
+library(nycflights13)
+library(gapminder)
+library(Lahman)
+```
+
+```{r}
+if(!require(tidyverse)){
+  install.packages('tidyverse')
+  require(tidyverse)
+} else{
+    require(tidyverse)
+}
+if(!require(maps)){
+  install.packages('maps')
+  require(maps)
+} else{
+  require(maps)
+}
+if(!require(nycflights13)){
+  install.packages('nycflights13')
+  require(nycflights13)
+} else{
+    require(nycflights13)
+  }
+```
+
+Hay tres cosas que se necesitan para que un ejemplo sea reproducible: los paquetes requeridos, los datos y el código:
+
+* Los paquetes deben ser cargados al inicio del código.
+
+* Para incluir datos se debe usar dput() para generar el código R para recrearlo. Ejemplo:
+
+1. Corra dput(mtcars) en R.
+
+2. Copie la salida.
+
+3. En el código reproducible, escriba 'mtcars <-' luego pegue.
+
+* Asegúrese de que su código sea de fácil lectura para otros.
+
+Para seguir lo que están haciendo los autores del libro y otros, se sugiere consultar el [Blog de RStudio](https://blog.rstudio.org/) y la comunidad de R en <http://www.r-bloggers.com/>.
+
+La página web del libro es <http://shop.oreilly.com/product/0636920034407.do>, la versión HTML está disponible en <http://r4ds.had.co.nz/> y el código fuente se puede consultar en <https://github.com/hadley/r4ds>

@@ -1,0 +1,82 @@
+---
+title: "Flujo de trabajo: Conceptos básicos"
+---
+
+```{r}
+if(!require(tidyverse)){
+  install.packages('tidyverse')
+  require(tidyverse)
+} else{
+    require(tidyverse)
+}
+```
+
+Este capítulo trata de asegurarse que se tiene un fundamentación sólida en correr código R y que se conocen las características más útiles de RStudio.
+
+## Código: Conceptos básicos
+* R puede usarse como una calculadora. Ejemplo:
+```{r}
+sin(pi / 2) + 1 / 200 * 30
+```
+
+* Se pueden crear nuevos objetos siguiendo la sintásis:
+```
+object_name <- value
+```
+
+* Los nombres de objetos deben iniciar con una letra y sólo pueden contener letras, números, _ y .. Para definir nombres informativos se recomienda usar una convención de nombres snake_case donde se separan palabras con _ (como en el ejemplo anterior).
+
+* Los objetos se pueden inspeccionar tecleando su nombre:
+```{r}
+this_is_a_really_long_name <- 2.5
+this_is_a_really_long_name
+```
+
+* Para buscar el objeto anterior entre una gran cantidad de objetos en una sesión de R, se puede usar el inicio del nombre ('this') seguido de Ctrl + flecha_arriba.
+
+* Si se cometió un error un error en la definición se usa el procedimiento anterior para llamar el objeto a ser modificado, se modifica y se vuelve a introducir.
+
+## Llamada de Funciones
+* La sintásis para llamar  las funciones preestablecidas de R es:
+```
+function_name(arg1 = val1, arg2 = val2, ...)
+```
+
+* Para buscar una función preestablecida se teclea el inicio de la función y se oprime Tab, que saca una lista de las funciones que empiezan con las letras especificadas y con las teclas de flechas puede seleccionar la que está buscando y finalmente oprime nuevamente Tab. Esto lo deja dentro de la función seleccionada.
+
+* En R los paréntesis y las comillas van en pares y si hace alguna cerrar algún par R avisa esto con el símbolo +. Ejemplo:
+```
+x <- "Hello!
+```
+
+Note que falta cerra las comillas dobles.
+
+* En R es usual chequear un objeto despues de creado. Ejemplo:
+```{r}
+y <- seq(1, 10, length.out = 5)
+y
+```
+
+Esto se puede abreviar usando lo siguiente:
+```{r}
+(y <- seq(1, 10, length.out = 5))
+```
+
+## Ejercicios
+1. Por qué este código no funciona?
+my_variable <- 10
+my_varıable
+
+Aunque similar note que en la segunda línea la i no tiene el punto: ı. De manera que no coinciden y por eso el error
+
+2. Modifique cada uno de los siguientes comandos R para que funcionen corrrectamente:
+```{r}
+ggplot(data = mpg) +
+geom_point(mapping = aes(x = displ, y = hwy))
+filter(mpg, cyl == 8)
+filter(diamonds, carat > 3)
+```
+
+3. Presione Alt-Shift-K. Qué sucede? Cómo puede usted conseguir lo mismo usando menús?
+
+En Tools_Keyboard Shortcuts Help.

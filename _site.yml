@@ -1,0 +1,22 @@
+name: "Seminario de R para la Ciencia de Datos"
+output_dir: "."
+navbar:
+  title: "Seminario de R para la Ciencia de Datos"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Preliminares"
+      href: Prelim.html
+    - text: "Cap_1"
+      href: Cap1.html
+    - text: "Cap_2"
+      href: Cap2.html
+    - text: "Cap_3"
+      href: Cap3.html
+    - text: "Cap_4"
+      href: Cap4.html
+      
+output:
+  html_document:
+    theme: united
+    highlight: textmate

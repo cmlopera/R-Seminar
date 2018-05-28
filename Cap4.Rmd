@@ -1,0 +1,5 @@
+---
+title: "Flujo de trabajo: Secuencias de comandos"
+---
+
+Sirven para guardar secuencias de comandos que hace tareas que usted necesita. Una práctica habitual en RStudio es ensayar código en la consola y cuando funciona guardarlo en un script. RStudio 
