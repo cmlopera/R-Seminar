@@ -217,13 +217,28 @@ $(document).ready(function () {
   require(tidyverse)
 } else{
     require(tidyverse)
-}
-if(!require(maps)){
+}</code></pre>
+<pre><code>## Loading required package: tidyverse</code></pre>
+<pre><code>## -- Attaching packages ------------------------------------------------------------- tidyverse 1.2.1 --</code></pre>
+<pre><code>## v ggplot2 2.2.1     v purrr   0.2.4
+## v tibble  1.4.2     v dplyr   0.7.5
+## v tidyr   0.8.1     v stringr 1.3.1
+## v readr   1.1.1     v forcats 0.3.0</code></pre>
+<pre><code>## -- Conflicts ---------------------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>if(!require(maps)){
   install.packages(&#39;maps&#39;)
   require(maps)
 } else{
   require(maps)
 }</code></pre>
+<pre><code>## Loading required package: maps</code></pre>
+<pre><code>## 
+## Attaching package: &#39;maps&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     map</code></pre>
 <p>El paquete <strong>ggplot</strong> es uno de los sistemas más versátiles y elegantes para hacer gráficas en R. Para más detalles teóricos de <strong>ggplot</strong> se recomienda leer <a href="http://vita.had.co.nz/papers/layered-grammar.pdf">A Layered Grammar of Graphics</a>.</p>
 <div id="primeros-pasos" class="section level2">
 <h2>Primeros pasos</h2>
